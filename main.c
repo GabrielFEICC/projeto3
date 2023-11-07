@@ -26,7 +26,10 @@ int main() {
             deletarTarefas(&lt);
         }else if(opcao==3){
             listarTarefas(lt);
-        }else{
+        }else if (opcao == 4) {
+            alterarTarefa(&lt);
+        }
+        else{
             printf("opcao invalida\n");
         }
         printf("%d\n", opcao);
