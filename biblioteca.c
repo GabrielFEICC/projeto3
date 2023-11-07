@@ -4,6 +4,24 @@
 #include "biblioteca.h"
 #include <stdlib.h>
 
+void printMenu() {
+    printf("Menu\n");
+    printf("1 - Cadastrar Tarefas\n");
+    printf("2 - Deletar Tarefas\n");
+    printf("3 - Listar Tarefas\n");
+    printf("4 - Alterar Tarefa\n");
+    printf("5 - Filtrar Tarefas por Prioridade\n");
+    printf("6 - Filtrar Tarefas por Estado\n");
+    printf("7 - Filtrar Tarefas por Categoria\n");
+    printf("8 - Filtrar Tarefas por Prioridade e Categoria\n");
+    printf("9 - Exportar Tarefas por Prioridade\n");
+    printf("10 - Exportar Tarefas por Categoria\n");
+    printf("11 - Exportar Tarefas por Prioridade e Categoria\n");
+    printf("0 - Sair\n");
+}
+
+
+
 //funcao de cadastrar as tarefas
 int cadastrarTarefa(ListaDeTarefas *lt){
     if (lt-> qtd < 100) {
@@ -138,11 +156,11 @@ int alterarTarefa(ListaDeTarefas *lt) {
     }
 
     int numeroTarefa;
-    printf("Digite o número da tarefa que deseja alterar: ");
+    printf("Digite o numero da tarefa que deseja alterar: ");
     scanf("%d", &numeroTarefa);
 
     if (numeroTarefa < 1 || numeroTarefa > lt->qtd) {
-        printf("Número de tarefa inválido.\n");
+        printf("Numero de tarefa invalido.\n");
         return 0;
     }
 
@@ -167,7 +185,7 @@ int alterarTarefa(ListaDeTarefas *lt) {
             scanf("%s", tarefa->categoria);
             break;
         case 3:
-            printf("Digite a nova descrição da tarefa: ");
+            printf("Digite a nova descricao da tarefa: ");
             scanf("%s", tarefa->descricao);
             break;
         case 4:
@@ -176,17 +194,17 @@ int alterarTarefa(ListaDeTarefas *lt) {
             scanf("%d", &estado);
 
             if (estado < 0 || estado > 2) {
-                printf("Estado inválido.\n");
+                printf("Estado invalido.\n");
                 return 0;
             }
 
             tarefa->estado = estado;
             break;
         default:
-            printf("Opção inválida.\n");
+            printf("Opção invalida.\n");
     }
 
-    printf("Tarefa alterada com sucesso!\n");
+    printf("Tarefa alterada com sucesso\n");
     return 1;
 }
 
