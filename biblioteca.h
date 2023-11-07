@@ -9,6 +9,7 @@ typedef struct {
     int prioridade;
     char categoria[100];
     char descricao[300];
+    int estado;
 } Tarefa;
 
 typedef struct {
@@ -20,6 +21,7 @@ typedef struct {
 int cadastrarTarefa(ListaDeTarefas *lt);
 int deletarTarefas(ListaDeTarefas *lt);
 int listarTarefas(ListaDeTarefas lt);
+int alterarTarefa(ListaDeTarefas *lt);
 
 //funcao para mostrar o menu para o usuario
 void printMenu();
