@@ -33,6 +33,11 @@ int main() {
             printf("Digite a prioridade para filtrar: ");
             scanf("%d", &prioridade);
             filtrarPorPrioridade(lt, prioridade);
+        }else if (opcao == 6) {
+            int estado;
+            printf("Digite o estado para filtrar (0 - Nao iniciado, 1 - Em andamento, 2 - Completo): ");
+            scanf("%d", &estado);
+            filtrarPorEstado(lt, estado);
         }else{
             printf("opcao invalida\n");
         }

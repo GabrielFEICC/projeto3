@@ -23,6 +23,8 @@ int deletarTarefas(ListaDeTarefas *lt);
 int listarTarefas(ListaDeTarefas lt);
 int alterarTarefa(ListaDeTarefas *lt);
 int filtrarPorPrioridade(ListaDeTarefas lt, int prioridade);
+int filtrarPorEstado(ListaDeTarefas lt, int estado);
+
 
 //funcao para mostrar o menu para o usuario
 void printMenu();
