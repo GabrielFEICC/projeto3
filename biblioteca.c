@@ -169,7 +169,7 @@ int alterarTarefa(ListaDeTarefas *lt) {
     printf("Escolha o campo a ser alterado:\n");
     printf("1. Prioridade\n");
     printf("2. Categoria\n");
-    printf("3. Descrição\n");
+    printf("3. Descricao\n");
     printf("4. Estado\n");
 
     int opcao;
@@ -201,7 +201,7 @@ int alterarTarefa(ListaDeTarefas *lt) {
             tarefa->estado = estado;
             break;
         default:
-            printf("Opção invalida.\n");
+            printf("Opcao invalida.\n");
     }
 
     printf("Tarefa alterada com sucesso\n");
@@ -254,4 +254,26 @@ int filtrarPorEstado(ListaDeTarefas lt, int estado) {
     return 1;
 }
 
+int filtrarPorCategoria(ListaDeTarefas lt, const char *categoria) {
+    int tarefasEncontradas = 0;
+
+    for (int i = 0; i < lt.qtd; i++) {
+        if (strcmp(lt.tarefas[i].categoria, categoria) == 0) {
+            printf("Tarefa: %d\n", i + 1);
+            printf("Prioridade: %d\n", lt.tarefas[i].prioridade);
+            printf("Categoria: %s\n", lt.tarefas[i].categoria);
+            printf("Descricao: %s\n", lt.tarefas[i].descricao);
+            printf("Estado: %d\n", lt.tarefas[i].estado);
+            printf("\n");
+            tarefasEncontradas = 1;
+        }
+    }
+
+    if (!tarefasEncontradas) {
+        printf("Nenhuma tarefa encontrada na categoria %s\n", categoria);
+        return 0;
+    }
+
+    return 1;
+}
 

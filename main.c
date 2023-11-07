@@ -38,6 +38,11 @@ int main() {
             printf("Digite o estado para filtrar (0 - Nao iniciado, 1 - Em andamento, 2 - Completo): ");
             scanf("%d", &estado);
             filtrarPorEstado(lt, estado);
+        }else if (opcao == 7) {
+            char categoria[100];
+            printf("Digite a categoria para filtrar: ");
+            scanf("%s", categoria);
+            filtrarPorCategoria(lt, categoria);
         }else{
             printf("opcao invalida\n");
         }
