@@ -28,8 +28,12 @@ int main() {
             listarTarefas(lt);
         }else if (opcao == 4) {
             alterarTarefa(&lt);
-        }
-        else{
+        }else if (opcao == 5){
+            int prioridade;
+            printf("Digite a prioridade para filtrar: ");
+            scanf("%d", &prioridade);
+            filtrarPorPrioridade(lt, prioridade);
+        }else{
             printf("opcao invalida\n");
         }
         printf("%d\n", opcao);

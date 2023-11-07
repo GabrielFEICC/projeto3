@@ -22,6 +22,7 @@ int cadastrarTarefa(ListaDeTarefas *lt);
 int deletarTarefas(ListaDeTarefas *lt);
 int listarTarefas(ListaDeTarefas lt);
 int alterarTarefa(ListaDeTarefas *lt);
+int filtrarPorPrioridade(ListaDeTarefas lt, int prioridade);
 
 //funcao para mostrar o menu para o usuario
 void printMenu();
