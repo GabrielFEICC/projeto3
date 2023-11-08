@@ -43,6 +43,14 @@ int main() {
             printf("Digite a categoria para filtrar: ");
             scanf("%s", categoria);
             filtrarPorCategoria(lt, categoria);
+        }else if (opcao == 8) {
+            int prioridade;
+            char categoria[100];
+            printf("Digite a prioridade para filtrar: ");
+            scanf("%d", &prioridade);
+            printf("Digite a categoria para filtrar: ");
+            scanf("%s", categoria);
+            filtrarPorPrioridadeECategoria(lt, prioridade, categoria);
         }else{
             printf("opcao invalida\n");
         }

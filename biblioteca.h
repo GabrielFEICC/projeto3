@@ -25,6 +25,7 @@ int alterarTarefa(ListaDeTarefas *lt);
 int filtrarPorPrioridade(ListaDeTarefas lt, int prioridade);
 int filtrarPorEstado(ListaDeTarefas lt, int estado);
 int filtrarPorCategoria(ListaDeTarefas lt, const char *categoria);
+int filtrarPorPrioridadeECategoria(ListaDeTarefas lt, int prioridade, const char *categoria);
 
 
 //funcao para mostrar o menu para o usuario
