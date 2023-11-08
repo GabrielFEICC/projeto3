@@ -343,3 +343,25 @@ int exportarPorCategoria(ListaDeTarefas lt, const char *categoria, const char *a
     printf("Tarefas na categoria %s exportadas para o arquivo %s.\n", categoria, arquivo);
     return 1;
 }
+
+int exportarPorPrioridadeECategoria(ListaDeTarefas lt, int prioridade, const char *categoria, const char *arquivo) {
+    FILE *exportFile = fopen(arquivo, "w");
+
+    if (!exportFile) {
+        printf("Erro ao abrir o arquivo de exportacao.\n");
+        return 0;
+    }
+
+    for (int i = 0; i < lt.qtd; i++) {
+        if (lt.tarefas[i].prioridade == prioridade && strcmp(lt.tarefas[i].categoria, categoria) == 0) {
+            fprintf(exportFile, "Prioridade: %d\n", lt.tarefas[i].prioridade);
+            fprintf(exportFile, "Categoria: %s\n", lt.tarefas[i].categoria);
+            fprintf(exportFile, "Estado: %d\n", lt.tarefas[i].estado);
+            fprintf(exportFile, "Descricao: %s\n\n");
+        }
+    }
+
+    fclose(exportFile);
+    printf("Tarefas com prioridade %d e na categoria %s exportadas para o arquivo %s.\n", prioridade, categoria, arquivo);
+    return 1;
+}
