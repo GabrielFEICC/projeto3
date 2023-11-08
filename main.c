@@ -51,6 +51,14 @@ int main() {
             printf("Digite a categoria para filtrar: ");
             scanf("%s", categoria);
             filtrarPorPrioridadeECategoria(lt, prioridade, categoria);
+        }else if (opcao == 9) {
+            int prioridade;
+            char exportFile[100];
+            printf("Digite a prioridade para exportar: ");
+            scanf("%d", &prioridade);
+            printf("Digite o nome do arquivo de exportação: ");
+            scanf("%s", exportFile);
+            exportarPorPrioridade(lt, prioridade, exportFile);
         }else{
             printf("opcao invalida\n");
         }
