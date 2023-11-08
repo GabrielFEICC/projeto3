@@ -67,6 +67,17 @@ int main() {
             printf("Digite o nome do arquivo de exportacao: ");
             scanf("%s", exportFile);
             exportarPorCategoria(lt, categoria, exportFile);
+        }else if (opcao == 11){
+            int prioridade;
+            char categoria[100];
+            char exportFile[100];
+            printf("Digite a prioridade para exportar: ");
+            scanf("%d", &prioridade);
+            printf("Digite a categoria para exportar: ");
+            scanf("%s", categoria);
+            printf("Digite o nome do arquivo de exportacao: ");
+            scanf("%s", exportFile);
+            exportarPorPrioridadeECategoria(lt, prioridade, categoria, exportFile);
         }else{
             printf("opcao invalida\n");
         }
