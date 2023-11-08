@@ -27,6 +27,7 @@ int filtrarPorEstado(ListaDeTarefas lt, int estado);
 int filtrarPorCategoria(ListaDeTarefas lt, const char *categoria);
 int filtrarPorPrioridadeECategoria(ListaDeTarefas lt, int prioridade, const char *categoria);
 int exportarPorPrioridade(ListaDeTarefas lt, int prioridade, const char *arquivo);
+int exportarPorCategoria(ListaDeTarefas lt, const char *categoria, const char *arquivo);
 
 
 //funcao para mostrar o menu para o usuario
