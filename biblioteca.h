@@ -17,7 +17,7 @@ typedef struct {
     int qtd;
 } ListaDeTarefas;
 
-//funcoes de cadastrar, deletar e listar tarefas
+//funcoes de cadastrar, deletar e listar tarefas, alterar, filtrar por prioridade, estado, categoria, estado e categoria, exportar por categoria, prioridade, categoria e prioridade
 int cadastrarTarefa(ListaDeTarefas *lt);
 int deletarTarefas(ListaDeTarefas *lt);
 int listarTarefas(ListaDeTarefas lt);
